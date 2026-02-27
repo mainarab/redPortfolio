@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 0px 40px;
+}
+
+header {
+  display: flex;
+  padding: 10px 0px;
+}
+
+nav {
+  display: none;
+}
+
+.logo {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+img {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.principal > article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h1 > span,
+h3 > span {
+  color: red;
+}
+
+.icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.icons > a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: red solid 1px;
+  border-radius: 100%;
+  color: red;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.icons a:hover {
+  color: black;
+  transform: scale(1.3) translateY(-5px);
+  background-color: red;
+  box-shadow: 0 0 25px red;
+}
+
+.btn {
+  color: red;
+  border: red solid 1px;
+  padding: 15px;
+  width: fit-content;
+  border-radius: 30px;
+  font-size: 1rem;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  color: black;
+  transform: scale(1) translateY(-5px);
+  background-color: red;
+  box-shadow: 0 0 25px red;
+}
+
+.typingText{
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
+.typingText span::before{
+    content: "Web developer";
+    color: red;
+    animation: words 10s infinite;
+}
+
+.typingText span::after{
+    content: "";
+    width: calc(100% + 8px);
+    right: -8;
+    animation: cursor 0.5s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid red;
+    }
+}
+
+@keyframes words {
+  0% { content: ""; }
+  4% { content: "F"; }
+  6% { content: "Fr"; }
+  8% { content: "Fro"; }
+  10% { content: "Fron"; }
+  12% { content: "Front"; }
+  14% { content: "Front-"; }
+  16% { content: "Front-E"; }
+  18% { content: "Front-En"; }
+  20% { content: "Front-End"; }
+  22% { content: "Front-End "; }
+  24% { content: "Front-End D"; }
+  26% { content: "Front-End De"; }
+  28% { content: "Front-End Dev"; }
+  30% { content: "Front-End Deve"; }
+  32% { content: "Front-End Devel"; }
+  34% { content: "Front-End Develo"; }
+  36% { content: "Front-End Develop"; }
+  38% { content: "Front-End Develope"; }
+  40% { content: "Front-End Developer"; }
+
+  50% { content: ""; }
+
+  54% { content: "U"; }
+  56% { content: "UX"; }
+  58% { content: "UX/"; }
+  60% { content: "UX/U"; }
+  63% { content: "UX/UI"; }
+  64% { content: "UX/UI "; }
+  66% { content: "UX/UI D"; }
+  68% { content: "UX/UI De"; }
+  70% { content: "UX/UI Des"; }
+  72% { content: "UX/UI Desi"; }
+  74% { content: "UX/UI Desig"; }
+  76% { content: "UX/UI Design"; }
+  78% { content: "UX/UI Designe"; }
+  80% { content: "UX/UI Designer"; }
+
+  100% { content: ""; }
+}
+
+@media (min-width: 1000px) {
+  body {
+    padding: 0rem 8rem;
+  }
+
+  header {
+    max-width: 1000px;
+    margin: 1.5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav > ul > li > a {
+    color: white;
+  }
+
+  nav a:hover,
+nav a.active{
+    color: red;
+    border-bottom: 3px solid red;
+}
+
+  .logo,
+  img {
+    transition: 0.3s ease;
+  }
+  .logo:hover {
+    transform: scale(1.1) translateY(-5px);
+  }
+
+  .principal {
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img:hover {
+    background-color: red;
+    box-shadow: 0 0 25px red;
+  }
+
+  .typingText{
+    font-size: 2rem;
+  }
+
+}
